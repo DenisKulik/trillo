@@ -1,14 +1,55 @@
 // logo
 .logo {
 	height: 3.25rem;
+	margin-left: 3rem;
 }
 
 // search
 .search {
+	flex: 0 0 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	&__input {
+		width: 90%;
+		margin-right: -3.25rem;
+		padding: 0.7rem 2rem;
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		border: none;
+		border-radius: 100px;
+		background-color: var(--color-grey-light-2);
+		transition: all 0.2s;
+
+		&:focus {
+			width: 100%;
+			outline: none;
+			background-color: var(--color-grey-light-3);
+		}
+
+		&::placeholder {
+			font-weight: 100;
+			color: var(--color-grey-light-4);
+		}
+	}
+
+	&__input:focus + &__btn {
+		background-color: var(--color-grey-light-3);
 	}
 
 	&__btn {
+		border: none;
+		background-color: var(--color-grey-light-2);
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			transform: translateY(2px);
+		}
 	}
 
 	&__icon {
