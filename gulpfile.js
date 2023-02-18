@@ -32,8 +32,10 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
-  gulp.watch(path.watch.svgSprive, svgSprive);
+  gulp.watch(path.watch.svgicons, svgSprive);
 }
+
+export { svgSprive };
 
 // Conservative processing of fonts
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
