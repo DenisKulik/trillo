@@ -2,6 +2,13 @@
 <html lang="en">
   @@include('html/head.html', { "title":"trillo | Booking app" })
   <body>
+    <div class="container">
+      @@include('html/header.html', {})
+      <div class="content">
+        @@include('html/nav.html', {}) @@include('html/main.html', {})
+      </div>
+    </div>
+
     <script src="js/app.min.js"></script>
   </body>
 </html>
