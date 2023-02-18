@@ -32,9 +32,8 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.svgSprive, svgSprive);
 }
-
-export { svgSprive };
 
 // Conservative processing of fonts
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -42,7 +41,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 // Main tasks
 const mainTasks = gulp.series(
   fonts,
-  gulp.parallel(copy, html, scss, js, images)
+  gulp.parallel(copy, html, scss, js, images, svgSprive)
 );
 
 // Building script for completing tasks
